@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  html {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #F0F1FF;
+    color: #1E293B;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 font-semibold text-white rounded-xl px-5 py-3 transition-all duration-200 min-h-[44px] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0;
+    background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
+    box-shadow: 0 4px 14px rgba(99,102,241,0.3);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 8px 24px rgba(99,102,241,0.45);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl px-5 py-3 transition-all duration-200 min-h-[44px] hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 font-semibold text-white rounded-xl px-5 py-3 transition-all duration-200 min-h-[44px] hover:-translate-y-0.5;
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    box-shadow: 0 4px 14px rgba(239,68,68,0.25);
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 font-semibold text-white rounded-xl px-5 py-3 transition-all duration-200 min-h-[44px] hover:-translate-y-0.5;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 4px 14px rgba(37,211,102,0.25);
+  }
+
+  .input-field {
+    @apply w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200 text-sm;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-sm;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
+  }
+  .gradient-hero {
+    background: linear-gradient(135deg, #1E1B4B 0%, #4C1D95 55%, #7C3AED 100%);
+  }
+  .gradient-sidebar {
+    background: linear-gradient(180deg, #1E1B4B 0%, #0F172A 100%);
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, #6366F1, #A855F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #E2E8F0;
+    border-radius: 99px;
+  }
+}
