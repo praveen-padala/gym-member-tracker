@@ -5,7 +5,6 @@ import {
 } from 'lucide-react'
 import type { Member, Screen, GymSettings } from './types'
 import { buildSeedMembers, DEFAULT_SETTINGS, STORAGE_KEY, SETTINGS_KEY } from './seedData'
-import { Symbol } from './components/Symbol'
 import { Login } from './screens/Login'
 import { Signup } from './screens/Signup'
 import { Dashboard } from './screens/Dashboard'
@@ -130,7 +129,6 @@ export default function App() {
       >
         {/* Brand */}
         <div className="flex items-center gap-3 px-5 py-5 border-b border-white/10">
-          <Symbol size={32} />
           <div className="min-w-0">
             <p className="font-bold text-white text-sm truncate">{settings.gymName}</p>
             <p className="text-white/40 text-[10px] truncate">Gym Management</p>
@@ -263,8 +261,7 @@ export default function App() {
         {/* Mobile header */}
         <header className="md:hidden flex items-center justify-between px-4 py-3 bg-white/90 backdrop-blur-sm border-b border-slate-200/60 sticky top-0 z-10">
           <div className="flex items-center gap-2.5">
-            <Symbol size={28} />
-            <span className="font-bold text-slate-800 text-sm truncate max-w-[140px]">{settings.gymName}</span>
+            <span className="font-bold text-slate-800 text-sm truncate max-w-[160px]">{settings.gymName}</span>
           </div>
           <div className="flex items-center gap-2">
             {attentionCount > 0 && (

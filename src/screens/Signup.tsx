@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Users, MessageCircle, IndianRupee, BarChart2 } from 'lucide-react'
-import { Symbol } from '../components/Symbol'
 import type { GymSettings } from '../types'
 
 interface SignupProps {
@@ -76,8 +75,7 @@ export function Signup({ onSignup, onGoLogin }: SignupProps) {
 
         <div className="relative z-10 flex flex-col h-full p-10 lg:p-14">
           <div className="flex items-center gap-3">
-            <Symbol size={36} />
-            <span className="text-white font-bold text-xl tracking-tight">GymTrack</span>
+            <span className="text-white font-bold text-xl tracking-tight">GymMemberTrack</span>
           </div>
 
           <div className="flex-1 flex flex-col justify-center py-10">
@@ -123,8 +121,7 @@ export function Signup({ onSignup, onGoLogin }: SignupProps) {
       <div className="flex-1 flex flex-col bg-white">
         <div className="md:hidden flex items-center justify-between px-6 py-4 border-b border-slate-100">
           <div className="flex items-center gap-2.5">
-            <Symbol size={28} />
-            <span className="font-bold text-slate-800">GymTrack</span>
+            <span className="font-bold text-slate-800">GymMemberTrack</span>
           </div>
           <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ background: '#F5F3FF', color: '#7C3AED' }}>
             Step {step} of 2

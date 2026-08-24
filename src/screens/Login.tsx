@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Users, MessageCircle, IndianRupee, BarChart2 } from 'lucide-react'
-import { Symbol } from '../components/Symbol'
 
 interface LoginProps {
   onLogin: (gymName: string) => void
@@ -55,8 +54,7 @@ export function Login({ onLogin, onGoSignup }: LoginProps) {
 
         <div className="relative z-10 flex flex-col h-full p-10 lg:p-14">
           <div className="flex items-center gap-3">
-            <Symbol size={36} />
-            <span className="text-white font-bold text-xl tracking-tight">GymTrack</span>
+            <span className="text-white font-bold text-xl tracking-tight">GymMemberTrack</span>
           </div>
 
           <div className="flex-1 flex flex-col justify-center py-10">
@@ -93,8 +91,7 @@ export function Login({ onLogin, onGoSignup }: LoginProps) {
       {/* ── Right form panel ── */}
       <div className="flex-1 flex flex-col bg-white">
         <div className="md:hidden flex items-center gap-3 px-6 py-4 border-b border-slate-100">
-          <Symbol size={28} />
-          <span className="font-bold text-slate-800 text-base">GymTrack</span>
+          <span className="font-bold text-slate-800 text-base">GymMemberTrack</span>
         </div>
 
         <div className="flex-1 flex items-center justify-center px-6 py-12 md:py-0">
@@ -167,7 +164,7 @@ export function Login({ onLogin, onGoSignup }: LoginProps) {
             </div>
 
             <p className="text-center text-sm text-slate-400">
-              New to GymTrack?{' '}
+              New to GymMemberTrack?{' '}
               <button
                 onClick={onGoSignup}
                 className="font-bold transition-colors hover:opacity-80 focus:outline-none"
