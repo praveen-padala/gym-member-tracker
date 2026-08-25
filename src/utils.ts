@@ -56,6 +56,16 @@ export function buildWhatsAppUrl(member: Member, gymName: string, template: stri
   return `https://wa.me/91${member.mobile}?text=${encodeURIComponent(message)}`
 }
 
+// Production: POST https://graph.facebook.com/v18.0/{phoneId}/messages
+export async function sendWhatsAppReminder(
+  _member: Member,
+  _gymName: string,
+  _template: string,
+): Promise<boolean> {
+  await new Promise((r) => setTimeout(r, 500 + Math.random() * 500))
+  return true
+}
+
 export function avatarUrl(name: string): string {
   const initials = name
     .split(' ')
